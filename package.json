@@ -1,0 +1,20 @@
+{
+  "name": "Curso_Profesional_JS",
+  "version": "1.0.0",
+  "description": "Curso profesional de javascript tomado de Platzi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andressd27/Curso_Profesional_JS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Andressd27/Curso_Profesional_JS/issues"
+  },
+  "homepage": "https://github.com/Andressd27/Curso_Profesional_JS#readme"
+}
