@@ -4,17 +4,23 @@
   "description": "Curso profesional de javascript tomado de Platzi",
   "main": "index.js",
   "scripts": {
+    "start": "live-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Andressd27/Curso_Profesional_JS.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "Platzi"
+  ],
+  "author": "Andrés Durán <andurand27@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Andressd27/Curso_Profesional_JS/issues"
   },
-  "homepage": "https://github.com/Andressd27/Curso_Profesional_JS#readme"
+  "homepage": "https://github.com/Andressd27/Curso_Profesional_JS#readme",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
 }
