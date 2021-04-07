@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <title>
+      Function.prototype.call, Function.prototype.apply, Function.prototype.bind
+    </title>
+  </head>
+
+  <body>
+    <a href="/ejercicios/">Go back</a>
+    <p><em>Abre la consola</em></p>
+
+    <ul>
+      <li><button class="call-to-action">Aprender</button></li>
+      <li><button class="call-to-action">Aprender Más</button></li>
+      <li><button class="call-to-action">¡Nunca parar de Aprender!</button></li>
+    </ul>
+
+    <script>
+      // Establece `this` usando `call`
+      function saludar () {
+        console.log(`Hola. Soy ${this.name} ${this.apellido} `)
+      }
+
+      const Andrés = {
+        name: "Andrés",
+        apellido: "Durán Daza"
+      }
+
+      saludar.call(Andrés)
+      
+      // Establece `this` usando `call` y pasar argumentos a la función
+      function caminar (metros, direccion) {
+        console.log(`${this.name} camina ${metros} metros hacia ${direccion} `)
+      }
+
+      caminar.call(Andrés, 400, "el norte")
+      // Establece `this` usando `apply` y pasar argumentos a la función
+      const valores = [800, "el noreste"]
+      caminar.apply(Andrés, valores)
+
+      /* 
+        Call - comma
+        Apply - arreglo
+      */ 
+
+      // Establecer `this` en una nueva función usando `bind`
+      const fabian = {
+        name: "Fabian",
+        apellido: "Quintero"
+      }
+      const danielSaluda = saludar.bind(fabian)
+      danielSaluda()
+
+      const fabianCamina = caminar.bind(fabian, 2000 )
+      fabianCamina("el oeste")
+
+      // Cuándo es útil usar uno de estos métodos
+      const buttons = document.getElementsByClassName("call-to-action")
+      // buttons.forEach(button => {
+      //   button.onclick = () => alert('Nunca pares de aprender!')
+      // });
+      // OTRA FORMA DE HACERLO ES MEDIANTE EL Operador de Propagación
+        console.log(buttons);
+         // importante el ;, la siguiente linea empieza con un array
+
+        // Transformo la colección de elemetnos HTML en un arreglo con spread operator.
+        // Practicamente spread toma la matriz y la convierte en una lista de elementos
+        // Si pasamos una cadena, la convierte en una matriz de caracteres
+        [...buttons].forEach(el => {
+          el.onclick = () => {
+            alert("Rest operator")
+          }
+        })
+      // NodeList
+        // Array.prototype.forEach.call(buttons, button => {
+        // button.onclick = () => alert('Nunca pares de aprender!')
+        // })
+    </script>
+  </body>
+</html>
